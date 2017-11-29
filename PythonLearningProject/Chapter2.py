@@ -186,6 +186,126 @@ Python 与其它语言不同， 条件条达式并不需要用括号括起来
 
 """
 
+# While 循环语句
+
+# for 循环和 range()内建函数
+"""
+    >>> foo = 'abc'
+    >>> for c in foo:
+    ...     print c     # 加 tab 键
+    ... 
+    a
+    b
+    c
+
+    >>> squared = [x ** 2 for x in range(4)]
+    >>> for i in squared:
+    ...     print i
+    ... 
+    0
+    1
+    4
+    9   
+
+"""
+
+# 文件和内建函数 open(),file()
+"""
+handle = open(file_name, access_mode = 'r')
+file_name 变量包含我们希望打开的文件的字符串名字，access_mode 中 'r' 表示读取， 'w' 表示写入， 'a' 表示添加。
+其它可能用到的标声还有 '+' 表示读写， 'b'表示二进制访 问. 
+如果未提供 access_mode ， 默认值为 'r'。如果 open() 成功， 一个文件对象句柄会被 返回。所有后续的文件操作都必须通过此文件句柄进行。
+当一个文件对象返回之后， 我们就可 以访问它的一些方法， 比如 readlines() 和 close().文件对象的方法属性也必须通过句点属 性标识法访问
+
+属性是与数据有关的项目， 属性可以是简单的数据值， 也可以是可执行对象， 比如函数 和方法。
+
+我如何访问对象属性? 使用句点属性标识法。 也就是说在对象名和属性名之间加一个句 点: object.attribute
+
+    # 
+    filename = raw_input('Enter file name: ')
+    fobj = open(filename, 'r')
+    for eachLine in fobj:
+    print eachLine,
+    fobj.close()
+
+我们的代码没有用循环一次取一行显示， 而是做了点改变。我们一次读入文件的所有行， 然后关闭文件， 再迭代每一行输出。
+这样写代码的好处是能够快速完整的访问文件。内容输出 和文件访问不必交替进行。这样代码更清晰， 而且将不相关的任务区分开来。
+需要注意的一点是文件的大小。 上面的代码适用于文件大小适中的文件。对于很大的文件来说， 上面的代码 会占用太多的内存， 这时你最好一次读一行。
+
+file()内建函数是最近才添加到 Python 当中的。它的功能等同于 open()， 不过 file() 这个名字可以更确切的表明它是一个工厂函数。(生成文件对象)类似 int()生成整数对象，
+dict()生成字典对象。
+
+"""
+
+# 错误和异常
+"""
+编译时会检查语法错误，不过 Python 也允许在程序运行时检测错误。当检测到一个错误， Python 解释器就引发一个异常， 并显示异常的详细信息。
+要给你的代码添加错误检测及异常处理， 只要将它们封装在 try-except 语句当中。 try 之后的代码组， 就是你打算管理的代码。 except 之后的代码组， 则是你处理错误的代码。
+
+"""
+
+# 函数
+"""
+Python 中的函数使用小括号( () )调用，函数在调用之前必须先定义。 如果函数中没有 return 语句， 就会自动返回 None 对象。
+Python 是通过引用调用的。 这意味着函数内对参数的改变会影响到原始对象。不过事实 上只有可变对象会受此影响， 对不可变对象来说， 它的行为类似按值调用。
+
+定义一个函数的语法由 def 关键字及紧随其后的函数名再加上该函数需要的几个参数组 成。
+函数参数(比较上面例子中的 arguments)是可选的， 这也是为什么把它们放到中括号中 的原因。
+(在你的代码里千万别写上中括号!)这个语句由一个冒号(:)结束(与 if 和 while 语句的结束方式一样)， 之后是代表函数体的代码组
+
+    >>> def addMe2Me(x):    
+    ...     'apply+operation to argument'
+    ...     return (x+x)
+    ... 
+    >>> addMe2Me(4.25)
+    8.5
+    >>> addMe2Me([-1,'abc'])
+    [-1, 'abc', -1, 'abc']
+    
+"""
+
+# 类
+"""
+    Python 并不强调以面向对象的方式编程；
+    如何定义类：
+    >>> class ClassName(base_class[es]):
+    ...     "optional documentation string"
+    ...     static_member_declarations
+    ...     method_declarations
+
+    使用 Class 关键词定义类。可以提供一个可选的父类或者说基类；如果没有合适的基类，就使用object 作为基类、Class 行之后是可选的文档字符串，静态成员定义，及方法定义。
+    
+    class FooClass(object):
+        \"""my very first class: FooClass\"""
+        version = 0.1 # class (data) attribute
+        def __init__(self, nm='John Doe'):
+        \"""constructor\"""
+        self.name = nm # class instance (data) attribute print 'Created a class instance for', nm
+        def showname(self):
+        \"""display instance attribute and class name\""" print 'Your name is', self.name
+        print 'My name is', self.__class__.__name__
+        def showver(self):
+        \"""display class(static) attribute\"""
+        print self.version # references FooClass.version def addMe2Me(self, x): # does not use 'self' \"""apply + operation to argument\"""
+        return x + x
+
+        # 在上面这个类中，我们定义了一个静态变量 version, 它将被所有实例及四个方法共享， __init__()， showname(), showver(), 及熟悉的 addMe2Me().
+        # 这些 show*()方法并没有做什 么有用的事情， 仅仅输出对应的信息。 __init__() 方法有一个特殊名字， 所有名字开始和 结束都有两个下划线的方法都是特殊方法。
+        # 当一个类实例被创建时， __init__() 方法会自动执行， 在类实例创建完毕后执行， 类 似构建函数。__init__() 可以被当成构建函数， 不过不象其它语言中的构建函数， 它并不创 建实例--它仅仅是你的对象创建后执行的第一个方法。
+        # 它的目的是执行一些该对象的必要的初 始化工作。通过创建自己的 __init__() 方法， 你可以覆盖默认的 __init__()方法(默认的 方法什么也不做)，从而能够修饰刚刚创建的对象。在这个例子里，我们初始化了一个名为 name 的类实例属性(或者说成员)。
+        # 这个变量仅在类实例中存在， 它并不是实际类本身的一部分。 __init__()需要一个默认的参数， 前一节中曾经介绍过。毫无疑问，你也注意到每个方法都有 的一个参数， self.
+    
+"""
+
+# 如何创建类实例
+"""
+    >>> foo1 = FooClass()
+     Created a class instance for John Doe
+     当一个实例被创建， __init__()就会被自动调用。不管这个__int__()是自定义的还是默认的。
+     创建一个类实例就像调用一个函数， 它们确实拥有一样的语法。它们都是可调用对象。类 实例使用同样的函数运算符调用一个函数或方法。既然我们成功创建了第一个类实例， 那现在 来进行一些方法调用:
+     
+"""
+
 
 
 
