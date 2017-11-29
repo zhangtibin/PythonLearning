@@ -1,50 +1,50 @@
 # PythonLearning
 PythonLearningProcess
 
-学习路线及学习资料博客：
+### 学习路线及学习资料博客：
 http://www.cnblogs.com/ZachRobin/category/1003887.html
 
-Python 初识及学习路线：
+### Python 初识及学习路线：
 
-　　CodeCademy Python 在线教学；
+　　[CodeCademy Python 在线教学](https://www.codecademy.com/zh/tracks/python)；
 
-　　廖雪峰 Python 2.7 教程；
+　　[廖雪峰 Python 2.7 教程](https://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000)；
 
-　　廖雪峰 Python 3.0 教程；
+　　[廖雪峰 Python 3.0 教程](https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000)；
 
-　　Python 官方文档（2.7~3.7：英文，法文，日文）。
+　　[Python 官方文档（2.7~3.7：英文，法文，日文）](https://docs.python.org/)。
 
-　　Python 新手入门。
-
-　　
-
-　　Python 学习书籍：
-
-　　《Python编程实践》、
-
-　　《Python基础教程》、
+　　[Python 新手入门](http://www.pythonforbeginners.com/)。
 
 　　
 
-　　Python 学习博客网站开源项目：
+### Python 学习书籍：
 
-　　Python 学习常用网址、技术博客、开源项目：
+　　[《Python编程实践》](https://book.douban.com/subject/7059900/)、
+
+　　[《Python基础教程》](https://book.douban.com/subject/4866934/)、
 
 　　
 
-　　视频教程：　　
+### Python 学习博客网站开源项目：
 
-　　Python 腾讯课堂：
+　　[Python 学习常用网址、技术博客、开源项目](http://simple-is-better.com/sites/)：
 
-　　百度网盘：Python 从入门到精通
+　　
+
+### 视频教程：　　
+
+　　[Python 腾讯课堂](https://ke.qq.com/course/list?mt=1001&st=2002&tt=3019)：
+
+　　百度网盘：[Python 从入门到精通](http://pan.baidu.com/s/1sjuwVa1)
 
 　　百度云：Python 入门配套视频：http://pan.baidu.com/s/1jH4KE38 提取码：99rp 
 
 　　百度云：老男孩教育-Python自动化开发15期：https://pan.baidu.com/s/1o8obwTk 提取码：t7m8
 
-　　百度云：中谷教育-Python视频教程
-
-      python3英文视频教程(全87集) http://pan.baidu.com/s/1dDnGBvV 
+　　百度云：[中谷教育-Python视频教程](https://yun.baidu.com/pcloud/album/info?uk=3087175837&album_id=8718056404618384250&errno=0&errmsg=Auth%20Login%20Sucess&&bduss=&ssnerror=0&traceid=) 
+　　
+　　python3英文视频教程(全87集) http://pan.baidu.com/s/1dDnGBvV 
 
 　　python从入门到精通视频（全60集）链接：http://pan.baidu.com/s/1eQw2dd4 密码：9bdl 
 
@@ -96,7 +96,7 @@ Python 初识及学习路线：
 
 　　
 
-　　拓展教程
+### 拓展教程
 
 　　1、网络爬虫-利用python实现爬取网页神技
 
