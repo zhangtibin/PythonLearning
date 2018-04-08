@@ -1,13 +1,13 @@
-# Python 前言基础知识
-
-# 注释规范：
-# Python 单行注释符号（#）
-
+#!/usr/bin/python3.6
 '''
 三对单引号，Python多行注释符号
 三对单引号，Python多行注释符号
 三对单引号，Python多行注释符号
 三对单引号，Python多行注释符号
+# Python 前言基础知识
+
+# 注释规范：
+# Python 单行注释符号（#）
 '''
 
 """
@@ -122,10 +122,10 @@ Unix 衍生系统(Linux，MacOS X，Solaris，FreeBSD 等等)
 
 """
 
-#!/usr/bin/python3.6
 
 
-
+a = 12
+print("Hello World!")
 
 
 
